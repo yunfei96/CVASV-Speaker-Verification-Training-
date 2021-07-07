@@ -79,7 +79,7 @@ def get_id_result():
 	veri_enroll = np.load("veri_enroll.npy")
 	veri_test = np.load("veri_test.npy")
 	#len(veri_label)
-	for i in range(200):
+	for i in range(len(veri_label)):
 		data0 = get_embedding(m, veri_enroll[i], 3)
 		data1 = get_embedding(m, veri_test[i], 3)
 
@@ -107,7 +107,7 @@ def get_id_result():
 		tpr =  "{:.2f}".format(tp[j]/p)
 		print(tpr)
 		print("false positive: ", end = '')
-		fpr = "{:.2f}".format( fp[j] / (200-p))
+		fpr = "{:.2f}".format( fp[j] / (len(veri_label)-p))
 		print(fpr)
 
 if __name__ == '__main__':
