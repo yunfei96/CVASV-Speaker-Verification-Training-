@@ -9,4 +9,7 @@ You need to have the VoxCeleb1 dataset for training
 This contains data preparation,change the path and you are good to train. 
 
 
-The trainning setting is using Titian X,took around 20 hrs to get to 80% classificattion accuracy 
+The trainning setting is using Titian X GPU, E5-1650, 32g RAM, windows 10,took around 20 hrs to get to 80% classificattion accuracy. 
+
+Lib setting
+anaconda: numpy, tf
